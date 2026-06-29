@@ -1,0 +1,4 @@
+rpf,x,y,rot
+RPf_00060_intact_mesh.png,1080.0,723.0,-7.251260087060282
+RPf_00059_intact_mesh.png,1050.0,0.0,0.0
+RPf_00061_intact_mesh.png,0.0,354.0,161.2195256217925

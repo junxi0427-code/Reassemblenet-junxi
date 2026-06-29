@@ -1,0 +1,85 @@
+{
+  "original_id": "RPobj_g1_o0001",
+  "fragments": [
+    {
+      "filename": "RPf_00004_intact_mesh.png",
+      "pixel_position": [
+        813,
+        1710
+      ],
+      "rotation": 4.369431667729006
+    },
+    {
+      "filename": "RPf_00006_intact_mesh.png",
+      "pixel_position": [
+        0,
+        1567
+      ],
+      "rotation": -145.7652117566415
+    },
+    {
+      "filename": "RPf_00008_intact_mesh.png",
+      "pixel_position": [
+        248,
+        917
+      ],
+      "rotation": 28.669869305290263
+    },
+    {
+      "filename": "RPf_00007_intact_mesh.png",
+      "pixel_position": [
+        928,
+        866
+      ],
+      "rotation": 84.90755689328923
+    },
+    {
+      "filename": "RPf_00003_intact_mesh.png",
+      "pixel_position": [
+        132,
+        2293
+      ],
+      "rotation": 203.4652155251835
+    },
+    {
+      "filename": "RPf_00010_intact_mesh.png",
+      "pixel_position": [
+        226,
+        0
+      ],
+      "rotation": -159.87545367616073
+    },
+    {
+      "filename": "RPf_00002_intact_mesh.png",
+      "pixel_position": [
+        880,
+        2453
+      ],
+      "rotation": 94.44076610657785
+    },
+    {
+      "filename": "RPf_00001_intact_mesh.png",
+      "pixel_position": [
+        616,
+        2909
+      ],
+      "rotation": -203.66532640748656
+    },
+    {
+      "filename": "RPf_00005_intact_mesh.png",
+      "pixel_position": [
+        245,
+        1799
+      ],
+      "rotation": -176.92269059916376
+    },
+    {
+      "filename": "RPf_00009_intact_mesh.png",
+      "pixel_position": [
+        837,
+        262
+      ],
+      "rotation": -104.33857764795091
+    }
+  ]
+}

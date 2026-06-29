@@ -1,0 +1,45 @@
+{
+  "original_id": "RPobj_g29_o0029",
+  "fragments": [
+    {
+      "filename": "RPf_00204_intact_mesh.png",
+      "pixel_position": [
+        58,
+        1722
+      ],
+      "rotation": 121.36839075838125
+    },
+    {
+      "filename": "RPf_00207_intact_mesh.png",
+      "pixel_position": [
+        652,
+        137
+      ],
+      "rotation": 63.55299094381187
+    },
+    {
+      "filename": "RPf_00208_intact_mesh.png",
+      "pixel_position": [
+        0,
+        0
+      ],
+      "rotation": 97.6701410178624
+    },
+    {
+      "filename": "RPf_00206_intact_mesh.png",
+      "pixel_position": [
+        1255,
+        1301
+      ],
+      "rotation": -110.01525715017523
+    },
+    {
+      "filename": "RPf_00205_intact_mesh.png",
+      "pixel_position": [
+        297,
+        1002
+      ],
+      "rotation": 121.07204251067274
+    }
+  ]
+}

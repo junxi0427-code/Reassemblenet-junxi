@@ -1,0 +1,51 @@
+Logging to ReassembleNet_ckpts/Exp_NCC_A100_full_1000
+creating model and diffusion...
+Running with args: Namespace(mode='train', kp_path='model_kp.pth', batch_size=1, epochs=1000, condition_channels=258, diffusion_steps=600, rotation=True, max_num_points=3300, max_pieces_in_any_puzzle_plus5=49, number_larger_than_pieces_and_points_in_puzzle=128, exp_name='Exp_NCC_A100_full_1000', dataset='repair', dataset_path='RePAIR_dataset/', transfer_learning=False, is_validate=True, set_name='train', ema_rate='0.9999', fp16_scale_growth=0.001, input_channels=4, learn_sigma=False, log_interval=20, lr=0.005, lr_anneal_steps=0, microbatch=-1, noise_schedule='cosine', num_channels=256, out_channels=4, predict_xstart=True, rescale_learned_sigmas=False, rescale_timesteps=False, resume_checkpoint='', save_interval=50, schedule_sampler='uniform', timestep_respacing='', use_checkpoint=False, use_fp16=False, use_image_features=False, use_kl=False, weight_decay=0.01, loader_num_workers=0, use_geometry_only=False, use_global_texture_only=False, images_folder_path='/home/aislam/A_PuzzFus_FinishingLine/FinishingLine_Datasets/Original_2DRePAIR_train_test_split', use_local_texture_only=False, use_geometry_and_global_texture=False, use_geometry_and_local_texture=False, use_local_and_global_texture=False, use_geometry_global_local_texture=True, use_learnable_kp_selection=True, eval_interval=100, is_kpoint_selection=False)
+creating data loader...
+Loaded weights from model_kp.pth
+
+================Loading train of RePAIR...
+
+self.start_idx : {'center': np.int64(0), 'angles': np.int64(2), 'poly': np.int64(4), 'corner_index': np.int64(6), 'piece_index': np.int64(134), 'padding_mask': np.int64(262), 'connections': np.int64(263)}
+self.end_idx : {'center': np.int64(2), 'angles': np.int64(4), 'poly': np.int64(6), 'corner_index': np.int64(134), 'piece_index': np.int64(262), 'padding_mask': np.int64(263), 'connections': np.int64(265)}
+loading data files:   0%|          | 0/89 [00:00<?, ?it/s]Loading pt path: RePAIR_dataset/jsons/data_87.pt
+loading data files:   2%|▏         | 2/89 [00:00<00:04, 19.22it/s]loading data files:   4%|▍         | 4/89 [00:00<00:06, 13.30it/s]loading data files:   7%|▋         | 6/89 [00:00<00:12,  6.72it/s]loading data files:   9%|▉         | 8/89 [00:01<00:16,  5.05it/s]loading data files:  11%|█         | 10/89 [00:01<00:17,  4.61it/s]loading data files:  12%|█▏        | 11/89 [00:02<00:25,  3.03it/s]loading data files:  13%|█▎        | 12/89 [00:02<00:22,  3.37it/s]loading data files:  16%|█▌        | 14/89 [00:04<00:37,  2.01it/s]loading data files:  17%|█▋        | 15/89 [00:05<00:46,  1.59it/s]loading data files:  19%|█▉        | 17/89 [00:08<01:15,  1.04s/it]loading data files:  21%|██▏       | 19/89 [00:09<00:48,  1.43it/s]loading data files:  22%|██▏       | 20/89 [00:09<00:40,  1.72it/s]loading data files:  26%|██▌       | 23/89 [00:09<00:21,  3.01it/s]loading data files:  28%|██▊       | 25/89 [00:09<00:16,  3.85it/s]loading data files:  30%|███       | 27/89 [00:09<00:15,  3.97it/s]loading data files:  31%|███▏      | 28/89 [00:10<00:15,  3.88it/s]loading data files:  34%|███▎      | 30/89 [00:10<00:14,  4.16it/s]loading data files:  35%|███▍      | 31/89 [00:10<00:13,  4.36it/s]loading data files:  36%|███▌      | 32/89 [00:10<00:11,  4.97it/s]loading data files:  38%|███▊      | 34/89 [00:11<00:09,  5.95it/s]loading data files:  39%|███▉      | 35/89 [00:11<00:13,  3.97it/s]loading data files:  40%|████      | 36/89 [00:12<00:17,  3.04it/s]loading data files:  42%|████▏     | 37/89 [00:12<00:15,  3.44it/s]loading data files:  45%|████▍     | 40/89 [00:13<00:13,  3.61it/s]loading data files:  48%|████▊     | 43/89 [00:13<00:10,  4.60it/s]loading data files:  51%|█████     | 45/89 [00:14<00:09,  4.79it/s]loading data files:  52%|█████▏    | 46/89 [00:14<00:10,  4.09it/s]loading data files:  53%|█████▎    | 47/89 [00:14<00:09,  4.35it/s]loading data files:  54%|█████▍    | 48/89 [00:15<00:10,  3.77it/s]loading data files:  55%|█████▌    | 49/89 [00:15<00:10,  3.90it/s]loading data files:  56%|█████▌    | 50/89 [00:15<00:13,  2.91it/s]loading data files:  57%|█████▋    | 51/89 [00:16<00:13,  2.91it/s]loading data files:  58%|█████▊    | 52/89 [00:16<00:11,  3.36it/s]loading data files:  60%|█████▉    | 53/89 [00:16<00:10,  3.33it/s]loading data files:  63%|██████▎   | 56/89 [00:17<00:07,  4.69it/s]loading data files:  64%|██████▍   | 57/89 [00:17<00:06,  4.87it/s]loading data files:  65%|██████▌   | 58/89 [00:17<00:08,  3.78it/s]loading data files:  66%|██████▋   | 59/89 [00:17<00:07,  3.95it/s]loading data files:  69%|██████▊   | 61/89 [00:18<00:09,  2.99it/s]loading data files:  70%|██████▉   | 62/89 [00:20<00:15,  1.79it/s]loading data files:  71%|███████   | 63/89 [00:20<00:12,  2.08it/s]loading data files:  72%|███████▏  | 64/89 [00:20<00:10,  2.41it/s]loading data files:  73%|███████▎  | 65/89 [00:21<00:09,  2.42it/s]loading data files:  74%|███████▍  | 66/89 [00:21<00:10,  2.22it/s]loading data files:  75%|███████▌  | 67/89 [00:21<00:08,  2.70it/s]loading data files:  78%|███████▊  | 69/89 [00:21<00:05,  3.91it/s]loading data files:  79%|███████▊  | 70/89 [00:22<00:06,  2.85it/s]loading data files:  80%|███████▉  | 71/89 [00:22<00:05,  3.05it/s]loading data files:  82%|████████▏ | 73/89 [00:23<00:03,  4.08it/s]loading data files:  83%|████████▎ | 74/89 [00:23<00:03,  4.70it/s]loading data files:  84%|████████▍ | 75/89 [00:23<00:02,  4.89it/s]loading data files:  85%|████████▌ | 76/89 [00:23<00:03,  4.11it/s]loading data files:  87%|████████▋ | 77/89 [00:24<00:04,  2.99it/s]loading data files:  88%|████████▊ | 78/89 [00:25<00:05,  1.91it/s]loading data files:  89%|████████▉ | 79/89 [00:25<00:05,  1.87it/s]loading data files:  90%|████████▉ | 80/89 [00:26<00:03,  2.25it/s]loading data files:  92%|█████████▏| 82/89 [00:26<00:02,  3.29it/s]loading data files:  93%|█████████▎| 83/89 [00:26<00:01,  3.68it/s]loading data files:  94%|█████████▍| 84/89 [00:26<00:01,  3.68it/s]loading data files:  97%|█████████▋| 86/89 [00:27<00:00,  5.13it/s]loading data files:  98%|█████████▊| 87/89 [00:29<00:01,  1.21it/s]loading data files:  99%|█████████▉| 88/89 [00:31<00:01,  1.04s/it]loading data files: 100%|██████████| 89/89 [00:31<00:00,  1.19it/s]loading data files: 100%|██████████| 89/89 [00:31<00:00,  2.79it/s]
+
+================Loading val of RePAIR...
+
+self.start_idx : {'center': np.int64(0), 'angles': np.int64(2), 'poly': np.int64(4), 'corner_index': np.int64(6), 'piece_index': np.int64(134), 'padding_mask': np.int64(262), 'connections': np.int64(263)}
+self.end_idx : {'center': np.int64(2), 'angles': np.int64(4), 'poly': np.int64(6), 'corner_index': np.int64(134), 'piece_index': np.int64(262), 'padding_mask': np.int64(263), 'connections': np.int64(265)}
+loading data files:   0%|          | 0/10 [00:00<?, ?it/s]Loading pt path: RePAIR_dataset/jsons_test/data_9.pt
+loading data files:  10%|█         | 1/10 [00:04<00:36,  4.11s/it]loading data files:  20%|██        | 2/10 [00:04<00:14,  1.85s/it]loading data files:  30%|███       | 3/10 [00:04<00:07,  1.07s/it]loading data files:  50%|█████     | 5/10 [00:04<00:02,  1.76it/s]loading data files:  60%|██████    | 6/10 [00:05<00:01,  2.25it/s]loading data files:  90%|█████████ | 9/10 [00:05<00:00,  3.34it/s]loading data files: 100%|██████████| 10/10 [00:05<00:00,  3.22it/s]loading data files: 100%|██████████| 10/10 [00:05<00:00,  1.69it/s]
+training...
+World size in TRAIN LOOP: 1
+E0620 18:01:36.750000 1123002 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -9) local_rank: 0 (pid: 1123010) of binary: /home3/qnbg66/miniconda3/envs/repairnet/bin/python
+Traceback (most recent call last):
+  File "/home3/qnbg66/miniconda3/envs/repairnet/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/home3/qnbg66/miniconda3/envs/repairnet/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/home3/qnbg66/miniconda3/envs/repairnet/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/home3/qnbg66/miniconda3/envs/repairnet/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/home3/qnbg66/miniconda3/envs/repairnet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home3/qnbg66/miniconda3/envs/repairnet/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+scripts/train.py FAILED
+--------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-06-20_18:01:36
+  host      : gpu11.ncc.clients.dur.ac.uk
+  rank      : 0 (local_rank: 0)
+  exitcode  : -9 (pid: 1123010)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 1123010
+========================================================

@@ -1,0 +1,21 @@
+{
+  "original_id": "RPobj_g83_o0103",
+  "fragments": [
+    {
+      "filename": "RPf_00935_intact_mesh.png",
+      "pixel_position": [
+        326,
+        0
+      ],
+      "rotation": -11.136692597371137
+    },
+    {
+      "filename": "RPf_00934_intact_mesh.png",
+      "pixel_position": [
+        0,
+        140
+      ],
+      "rotation": 113.86961486108346
+    }
+  ]
+}

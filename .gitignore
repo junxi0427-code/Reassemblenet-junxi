@@ -1,0 +1,19 @@
+# Local Python environments
+.venv/
+venv/
+.env/
+
+# Python cache/build outputs
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Local invalid git placeholder backup
+.git_invalid_empty_backup/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

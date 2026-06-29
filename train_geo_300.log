@@ -1,0 +1,95 @@
+Logging to ReassembleNet_ckpts/Exp_RePAIR_geo_300
+creating model and diffusion...
+Running with args: Namespace(mode='train', kp_path='model_kp.pth', batch_size=1, epochs=300, condition_channels=258, diffusion_steps=200, rotation=True, max_num_points=3300, max_pieces_in_any_puzzle_plus5=49, number_larger_than_pieces_and_points_in_puzzle=128, exp_name='Exp_RePAIR_geo_300', dataset='repair', dataset_path='RePAIR_dataset/', transfer_learning=False, is_validate=True, set_name='train', ema_rate='0.9999', fp16_scale_growth=0.001, input_channels=4, learn_sigma=False, log_interval=500, lr=0.005, lr_anneal_steps=0, microbatch=-1, noise_schedule='cosine', num_channels=256, out_channels=4, predict_xstart=True, rescale_learned_sigmas=False, rescale_timesteps=False, resume_checkpoint='', save_interval=50, schedule_sampler='uniform', timestep_respacing='', use_checkpoint=False, use_fp16=False, use_image_features=False, use_kl=False, weight_decay=0.01, loader_num_workers=0, use_geometry_only=True, use_global_texture_only=False, images_folder_path='/home/aislam/A_PuzzFus_FinishingLine/FinishingLine_Datasets/Original_2DRePAIR_train_test_split', use_local_texture_only=False, use_geometry_and_global_texture=False, use_geometry_and_local_texture=False, use_local_and_global_texture=False, use_geometry_global_local_texture=False, use_learnable_kp_selection=True, eval_interval=10, is_kpoint_selection=False)
+creating data loader...
+Loaded weights from model_kp.pth
+
+================Loading train of RePAIR...
+
+self.start_idx : {'center': np.int64(0), 'angles': np.int64(2), 'poly': np.int64(4), 'corner_index': np.int64(6), 'piece_index': np.int64(134), 'padding_mask': np.int64(262), 'connections': np.int64(263)}
+self.end_idx : {'center': np.int64(2), 'angles': np.int64(4), 'poly': np.int64(6), 'corner_index': np.int64(134), 'piece_index': np.int64(262), 'padding_mask': np.int64(263), 'connections': np.int64(265)}
+loading data files:   0%|          | 0/89 [00:00<?, ?it/s]loading data files:   4%|▍         | 4/89 [00:00<00:02, 29.04it/s]loading data files:   8%|▊         | 7/89 [00:02<00:30,  2.65it/s]loading data files:  10%|█         | 9/89 [00:02<00:23,  3.34it/s]loading data files:  12%|█▏        | 11/89 [00:02<00:18,  4.15it/s]loading data files:  13%|█▎        | 12/89 [00:03<00:21,  3.63it/s]loading data files:  17%|█▋        | 15/89 [00:03<00:14,  5.09it/s]loading data files:  18%|█▊        | 16/89 [00:03<00:13,  5.52it/s]loading data files:  19%|█▉        | 17/89 [00:03<00:12,  5.57it/s]loading data files:  21%|██▏       | 19/89 [00:03<00:09,  7.30it/s]loading data files:  24%|██▎       | 21/89 [00:05<00:25,  2.71it/s]loading data files:  26%|██▌       | 23/89 [00:05<00:17,  3.75it/s]loading data files:  28%|██▊       | 25/89 [00:05<00:14,  4.55it/s]loading data files:  29%|██▉       | 26/89 [00:06<00:20,  3.06it/s]loading data files:  30%|███       | 27/89 [00:06<00:19,  3.12it/s]loading data files:  31%|███▏      | 28/89 [00:07<00:18,  3.27it/s]loading data files:  33%|███▎      | 29/89 [00:07<00:17,  3.46it/s]loading data files:  34%|███▎      | 30/89 [00:07<00:14,  4.15it/s]loading data files:  36%|███▌      | 32/89 [00:07<00:10,  5.31it/s]loading data files:  38%|███▊      | 34/89 [00:08<00:11,  4.97it/s]loading data files:  39%|███▉      | 35/89 [00:08<00:12,  4.35it/s]loading data files:  40%|████      | 36/89 [00:08<00:10,  4.90it/s]loading data files:  42%|████▏     | 37/89 [00:08<00:09,  5.35it/s]loading data files:  43%|████▎     | 38/89 [00:09<00:10,  4.65it/s]loading data files:  46%|████▌     | 41/89 [00:09<00:06,  6.96it/s]loading data files:  47%|████▋     | 42/89 [00:09<00:11,  4.09it/s]loading data files:  48%|████▊     | 43/89 [00:10<00:09,  4.62it/s]loading data files:  49%|████▉     | 44/89 [00:10<00:08,  5.07it/s]loading data files:  52%|█████▏    | 46/89 [00:10<00:05,  7.18it/s]loading data files:  54%|█████▍    | 48/89 [00:10<00:04,  8.25it/s]loading data files:  56%|█████▌    | 50/89 [00:10<00:04,  8.12it/s]loading data files:  58%|█████▊    | 52/89 [00:11<00:04,  8.27it/s]loading data files:  61%|██████    | 54/89 [00:11<00:03,  9.08it/s]loading data files:  63%|██████▎   | 56/89 [00:11<00:03, 10.01it/s]loading data files:  65%|██████▌   | 58/89 [00:11<00:04,  6.79it/s]loading data files:  69%|██████▊   | 61/89 [00:12<00:03,  8.11it/s]loading data files:  71%|███████   | 63/89 [00:12<00:02,  9.46it/s]loading data files:  73%|███████▎  | 65/89 [00:12<00:02,  8.88it/s]loading data files:  75%|███████▌  | 67/89 [00:12<00:03,  7.20it/s]loading data files:  80%|███████▉  | 71/89 [00:13<00:01, 11.42it/s]loading data files:  82%|████████▏ | 73/89 [00:13<00:01, 12.69it/s]loading data files:  84%|████████▍ | 75/89 [00:13<00:01, 10.35it/s]loading data files:  87%|████████▋ | 77/89 [00:13<00:01, 11.45it/s]loading data files:  89%|████████▉ | 79/89 [00:14<00:01,  7.01it/s]loading data files:  91%|█████████ | 81/89 [00:14<00:01,  6.02it/s]loading data files:  93%|█████████▎| 83/89 [00:14<00:00,  6.62it/s]loading data files:  94%|█████████▍| 84/89 [00:15<00:01,  4.44it/s]loading data files:  97%|█████████▋| 86/89 [00:16<00:00,  3.53it/s]loading data files:  99%|█████████▉| 88/89 [00:16<00:00,  4.76it/s]loading data files: 100%|██████████| 89/89 [00:16<00:00,  5.08it/s]loading data files: 100%|██████████| 89/89 [00:16<00:00,  5.42it/s]
+
+================Loading val of RePAIR...
+
+self.start_idx : {'center': np.int64(0), 'angles': np.int64(2), 'poly': np.int64(4), 'corner_index': np.int64(6), 'piece_index': np.int64(134), 'padding_mask': np.int64(262), 'connections': np.int64(263)}
+self.end_idx : {'center': np.int64(2), 'angles': np.int64(4), 'poly': np.int64(6), 'corner_index': np.int64(134), 'piece_index': np.int64(262), 'padding_mask': np.int64(263), 'connections': np.int64(265)}
+loading data files:   0%|          | 0/10 [00:00<?, ?it/s]loading data files:  20%|██        | 2/10 [00:00<00:01,  6.71it/s]loading data files:  30%|███       | 3/10 [00:00<00:01,  5.73it/s]loading data files:  50%|█████     | 5/10 [00:00<00:00,  5.78it/s]loading data files:  60%|██████    | 6/10 [00:01<00:00,  5.55it/s]loading data files:  90%|█████████ | 9/10 [00:01<00:00,  8.58it/s]loading data files: 100%|██████████| 10/10 [00:01<00:00,  8.07it/s]loading data files: 100%|██████████| 10/10 [00:01<00:00,  7.18it/s]
+training...
+World size in TRAIN LOOP: 1
+Epoch 1/300
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/d/repair/ReassembleNet-main2/ReassembleNet-main/scripts/train.py", line 358, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/d/repair/ReassembleNet-main2/ReassembleNet-main/scripts/train.py", line 330, in main
+[rank0]:     ).run_loop()
+[rank0]:   File "/mnt/d/repair/ReassembleNet-main2/ReassembleNet-main/reassemblenet/train_util.py", line 410, in run_loop
+[rank0]:     batch, cond = self.process_learnable_kp_selection(batch, cond)
+[rank0]:   File "/mnt/d/repair/ReassembleNet-main2/ReassembleNet-main/reassemblenet/train_util.py", line 185, in process_learnable_kp_selection
+[rank0]:     selected_x, nodes, score, edge_index, new_batch, batch_ = self.kp_selection_model(x)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/mnt/d/repair/ReassembleNet-main2/ReassembleNet-main/reassemblenet/k_point_selector.py", line 171, in forward
+[rank0]:     x, nodes, score, edge_index, new_batch = self.nets(x, edge_index, batch)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/mnt/d/repair/ReassembleNet-main2/ReassembleNet-main/reassemblenet/k_point_selector.py", line 95, in forward
+[rank0]:     feats, _ = self.gnn_backbone1(x=combined_feats, batch=batch, edge_index=edge_index)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/mnt/d/repair/ReassembleNet-main2/ReassembleNet-main/reassemblenet/Transformer_GNN.py", line 32, in forward
+[rank0]:     x, atts = self.module_list[i](
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch_geometric/nn/conv/transformer_conv.py", line 234, in forward
+[rank0]:     out = self.propagate(edge_index, query=query, key=key, value=value,
+[rank0]:   File "/tmp/torch_geometric.nn.conv.transformer_conv_TransformerConv_propagate_b208gk_9.py", line 201, in propagate
+[rank0]:     kwargs = self.collect(
+[rank0]:   File "/tmp/torch_geometric.nn.conv.transformer_conv_TransformerConv_propagate_b208gk_9.py", line 102, in collect
+[rank0]:     query_i = self._index_select(query, edge_index_i)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py", line 267, in _index_select
+[rank0]:     return self._index_select_safe(src, index)
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py", line 290, in _index_select_safe
+[rank0]:     raise e
+[rank0]:   File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py", line 271, in _index_select_safe
+[rank0]:     return src.index_select(self.node_dim, index)
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 324.00 MiB. GPU 0 has a total capacity of 7.96 GiB of which 6.27 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 83.47 MiB is allocated by PyTorch, and 18.53 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[rank0]:[W619 18:20:32.861441245 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E0619 18:20:35.351000 427 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 0 (pid: 460) of binary: /home/junxi/miniconda3/envs/rn_clean/bin/python
+Traceback (most recent call last):
+  File "/home/junxi/miniconda3/envs/rn_clean/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+  File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/junxi/miniconda3/envs/rn_clean/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-06-19_18:20:35
+  host      : Bao.localdomain
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 460)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
