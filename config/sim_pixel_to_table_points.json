@@ -1,0 +1,114 @@
+{
+  "source": "sim_gazebo_piece_sweep_calibration_points",
+  "world_name": "mirobot_table_piece_world",
+  "calibration_piece": "puzzle_piece_1",
+  "points": [
+    {
+      "pixel": [
+        364.0,
+        234.0
+      ],
+      "table": [
+        0.18,
+        -0.08
+      ]
+    },
+    {
+      "pixel": [
+        274.0,
+        234.0
+      ],
+      "table": [
+        0.18,
+        0.08
+      ]
+    },
+    {
+      "pixel": [
+        364.0,
+        200.0
+      ],
+      "table": [
+        0.24,
+        -0.08
+      ]
+    },
+    {
+      "pixel": [
+        319.0,
+        194.0
+      ],
+      "table": [
+        0.24,
+        0.0
+      ]
+    },
+    {
+      "pixel": [
+        274.0,
+        200.0
+      ],
+      "table": [
+        0.24,
+        0.08
+      ]
+    },
+    {
+      "pixel": [
+        353.0,
+        166.0
+      ],
+      "table": [
+        0.3,
+        -0.06
+      ]
+    },
+    {
+      "pixel": [
+        285.0,
+        166.0
+      ],
+      "table": [
+        0.3,
+        0.06
+      ]
+    }
+  ],
+  "debug_images_per_point": [
+    {
+      "raw": "/tmp/sim_calibration_piece_1_raw.png",
+      "mask": "/tmp/sim_calibration_piece_1_mask.png",
+      "overlay": "/tmp/sim_calibration_piece_1_overlay.png"
+    },
+    {
+      "raw": "/tmp/sim_calibration_piece_3_raw.png",
+      "mask": "/tmp/sim_calibration_piece_3_mask.png",
+      "overlay": "/tmp/sim_calibration_piece_3_overlay.png"
+    },
+    {
+      "raw": "/tmp/sim_calibration_piece_4_raw.png",
+      "mask": "/tmp/sim_calibration_piece_4_mask.png",
+      "overlay": "/tmp/sim_calibration_piece_4_overlay.png"
+    },
+    {
+      "raw": "/tmp/sim_calibration_piece_5_raw.png",
+      "mask": "/tmp/sim_calibration_piece_5_mask.png",
+      "overlay": "/tmp/sim_calibration_piece_5_overlay.png"
+    },
+    {
+      "raw": "/tmp/sim_calibration_piece_6_raw.png",
+      "mask": "/tmp/sim_calibration_piece_6_mask.png",
+      "overlay": "/tmp/sim_calibration_piece_6_overlay.png"
+    },
+    {
+      "raw": "/tmp/sim_calibration_piece_7_raw.png",
+      "mask": "/tmp/sim_calibration_piece_7_mask.png",
+      "overlay": "/tmp/sim_calibration_piece_7_overlay.png"
+    },
+    {
+      "raw": "/tmp/sim_calibration_piece_8_raw.png",
+      "mask": "/tmp/sim_calibration_piece_8_mask.png",
+      "overlay": "/tmp/sim_calibration_piece_8_overlay.png"
+    }
+  ]
+}

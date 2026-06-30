@@ -36,13 +36,7 @@ def pixel_to_table(h, pixel):
     return [float(out[0]), float(out[1])]
 
 
-def main():
-    args = parse_args()
-    plan = load_json(args.plan_json)
-    calibration = load_json(args.calibration_json)
-    h = np.array(calibration["homography_pixel_to_table"], dtype=np.float64)
-    move = plan.get("move", {})
-
+def apply_calibration_to_move(move, h, assembly_anchor_table_xy):
     for src, dst in [
         ("grasp_pixel", "grasp_table_xy"),
         ("current_center_pixel", "current_center_table_xy"),
@@ -52,17 +46,32 @@ def main():
         if src in move and move[src] is not None:
             move[dst] = pixel_to_table(h, move[src])
 
-    if args.assembly_anchor_table_xy is not None:
+    if assembly_anchor_table_xy is not None:
         relation = move.get("predicted_relation", {})
         dx = float(relation["relative_dx"])
         dy = float(relation["relative_dy"])
-        anchor = [float(args.assembly_anchor_table_xy[0]), float(args.assembly_anchor_table_xy[1])]
+        anchor = [float(assembly_anchor_table_xy[0]), float(assembly_anchor_table_xy[1])]
         move["assembly_anchor_table_xy"] = anchor
         move["reference_target_table_xy"] = anchor
         move["target_center_table_xy"] = [anchor[0] + dx, anchor[1] + dy]
         move["target_policy"] = "assembly_anchor_plus_reassemblenet_relative_relation"
     else:
         move["target_policy"] = "pixel_preview_homography"
+
+
+def main():
+    args = parse_args()
+    plan = load_json(args.plan_json)
+    calibration = load_json(args.calibration_json)
+    h = np.array(calibration["homography_pixel_to_table"], dtype=np.float64)
+    moves = plan.get("moves")
+    if not moves:
+        moves = [plan.get("move", {})]
+
+    for move in moves:
+        apply_calibration_to_move(move, h, args.assembly_anchor_table_xy)
+    plan["move"] = moves[0]
+    plan["moves"] = moves
 
     plan["status"] = "candidate_plan_with_table_coordinates_not_executed"
     plan["calibration"] = {
@@ -75,10 +84,14 @@ def main():
         json.dump(plan, f, indent=2)
         f.write("\n")
     print(f"wrote {args.output_json}")
-    print(f"grasp_table_xy={move.get('grasp_table_xy')}")
-    print(f"target_center_table_xy_preview={move.get('target_center_table_xy_preview')}")
-    if move.get("target_center_table_xy") is not None:
-        print(f"target_center_table_xy={move.get('target_center_table_xy')} policy={move.get('target_policy')}")
+    print(f"calibrated moves: {len(moves)}")
+    for move in moves:
+        print(
+            f"relation_index={move.get('relation_index')} move_piece={move.get('move_piece')} "
+            f"grasp_table_xy={move.get('grasp_table_xy')} "
+            f"target_center_table_xy_preview={move.get('target_center_table_xy_preview')}")
+        if move.get("target_center_table_xy") is not None:
+            print(f"  target_center_table_xy={move.get('target_center_table_xy')} policy={move.get('target_policy')}")
 
 
 if __name__ == "__main__":

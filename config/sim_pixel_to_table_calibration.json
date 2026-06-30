@@ -1,0 +1,112 @@
+{
+  "source": "pixel_to_table_homography_calibration",
+  "name": "sim_pixel_to_table_calibration_from_piece_sweep",
+  "input_points_json": "/home/junxi/ReassembleNet-main/config/sim_pixel_to_table_points.json",
+  "point_count": 7,
+  "units": {
+    "pixel": "camera image pixels [u, v]",
+    "table": "table/robot planar coordinates [x, y] in meters"
+  },
+  "homography_pixel_to_table": [
+    [
+      -6.045723327426095e-14,
+      -0.0017931850513010874,
+      0.6134758536745201
+    ],
+    [
+      -0.0019027628664831768,
+      -3.578858049349888e-15,
+      0.6069813544097086
+    ],
+    [
+      -3.2768810877789233e-13,
+      0.0003511997784426062,
+      1.0
+    ]
+  ],
+  "calibration_points": [
+    {
+      "pixel": [
+        364.0,
+        234.0
+      ],
+      "table": [
+        0.18,
+        -0.08
+      ]
+    },
+    {
+      "pixel": [
+        274.0,
+        234.0
+      ],
+      "table": [
+        0.18,
+        0.08
+      ]
+    },
+    {
+      "pixel": [
+        364.0,
+        200.0
+      ],
+      "table": [
+        0.24,
+        -0.08
+      ]
+    },
+    {
+      "pixel": [
+        319.0,
+        194.0
+      ],
+      "table": [
+        0.24,
+        0.0
+      ]
+    },
+    {
+      "pixel": [
+        274.0,
+        200.0
+      ],
+      "table": [
+        0.24,
+        0.08
+      ]
+    },
+    {
+      "pixel": [
+        353.0,
+        166.0
+      ],
+      "table": [
+        0.3,
+        -0.06
+      ]
+    },
+    {
+      "pixel": [
+        285.0,
+        166.0
+      ],
+      "table": [
+        0.3,
+        0.06
+      ]
+    }
+  ],
+  "fit_error_m": {
+    "mean": 0.0026824144914480755,
+    "max": 0.008656313537600352,
+    "per_point": [
+      0.0012233945400061603,
+      0.0012233945404736596,
+      0.0018862615420094158,
+      0.008656313537600352,
+      0.0018862615434854016,
+      0.0019506378671390848,
+      0.0019506378694224564
+    ]
+  }
+}
